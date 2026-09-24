@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successful</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #071a2e, #123f63);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .card {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      padding: 50px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .check {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #d6e3ec;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      color: #38d9a9;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38d9a9;
+      color: #071a2e;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #55e6bb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="check">✅</div>
+
+    <h1>You're In!</h1>
+
+    <p>
+      Thank you <span class="highlight" id="userName"></span>
+      for registering for the Cohort 8 Capstone Project.
+    </p>
+
+    <p>
+      We've sent a welcome message to your email.
+      Please check your inbox for the next step.
+    </p>
+
+    <a href="index.html" class="btn">
+      BACK TO HOME
+    </a>
+
+  </div>
+
+  <script>
+    const name = localStorage.getItem("cohort8Name");
+
+    if (name) {
+      document.getElementById("userName").textContent = name;
+    }
+  </script>
+
+</body>
+</html>
